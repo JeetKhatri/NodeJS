@@ -1,5 +1,3 @@
-//module is file name and run that file
-
 module.exports.sum = function(a,b) {
     return `The sum of ${a} and ${b} is ${a+b}`;
 }

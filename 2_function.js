@@ -1,3 +1,7 @@
+//   https://stackoverflow.com/questions/1013385/what-is-the-difference-between-a-function-expression-vs-declaration-in-javascrip
+//   https://www.sitepoint.com/function-expressions-vs-declarations/
+
+
 //function
 function simplefun(){
     console.log('simple function');
@@ -15,13 +19,7 @@ function callFunction(fun){
 }
 callFunction(expr);
 
-
 //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
 
-
-// Create a function that takes two arguments and returns the sum of those arguments
 var adder = new Function('a', 'b', 'return a + b');
-
-// Call the function
 console.log(adder(2, 6));
-// > 8
