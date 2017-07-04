@@ -3,6 +3,7 @@ What is Node.js?
 -	Node.js is free
 -	Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
 -	Node.js uses JavaScript on the server
+- Node.js is a platform which allows us to run javaScript on a computer or server.
 
 Why Node.js?
 	Node.js uses asynchronous programming!
@@ -21,8 +22,8 @@ Here is how Node.js handles a file request:
 -	Ready to handle the next request.
 -	When the file system has opened and read the file, the server returns the content to the client.
 
-Node.js eliminates the waiting, and simply continues with the next request. 
-Node.js runs single-threaded, non-blocking, asynchronously programming, which is very memory efficient.
+Node.js eliminates the waiting, and simply continues with the next request.
+Node.js is single-threaded, non-blocking, asynchronously programming, which is very memory efficient.      <-----
 
 What Can Node.js Do?
 -	Node.js can generate dynamic page content
@@ -30,19 +31,99 @@ What Can Node.js Do?
 -	Node.js can collect form data
 -	Node.js can add, delete, modify data in your database
 
-V8 Engine   
+V8 Engine
 -	Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8Engine).
--	A javaScript engine takes JS and convert it into somthing that understand machine code.
--	Its heart of node JS.
--	V8 Engine convert JS into machine code.
+-	A javaScript engine takes JS and convert it into somthing that understand machine code.      <-----
+-	Its heart of node JS.                                                                        <-----
+-	V8 Engine convert JS into machine code.                                                      <-----
 -	it embadded inside node JS.
 
 Node JS is actually writtern in c++ and it allow write JS which run on computer or server.
 Node JS written in c++ because V8 Engine also written in c++.
 
 	JavaScript
-		|	
+		|
 [c++  -   Node JS(V8)]
 		|
 	machine code
+
 	
+REPL Terminal :-
+-	REPL stands for Read Eval Print Loop.
+-	it represents a computer environment like a Windows console where a command is entered and the system responds with an output in an interactive mode. 
+-	Read : Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
+-	Eval : Takes and evaluates the data structure.
+-	Print : Prints the result.
+-	Loop : Loops the above command until the user presses ctrl-c twice.
+
+
+Callbacks Concept :-
+-	Callback is an asynchronous equivalent for a function. 
+-	A callback function is called at the completion of a given task. 
+-	Node makes heavy use of callbacks. All the APIs of Node are written in such a way that they support callbacks.
+-	Ex. 8_ReadWriteFromFile.js
+-	read file : readFileSync for Synchronous and readFile from Asynchronous reading
+-	Synchronous meaning give command to read file and display it when task over do another task.
+-	Asynchronous meaning give command to read file do another task when first task complete then display that file.
+
+
+Event  &  Event Emitter :-
+-	Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. 
+-	Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency. 
+-	Node uses observer pattern.
+-	Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event.
+-	Node.js uses events heavily and it is also one of the reasons why Node.js is pretty fast compared to other technologies.
+-	In an event-driven application, there is generally a main loop that listens for events (con...)
+-	(con...)then triggers a callback function when one of those events is detected.
+-	The functions that listen to events act as Observers. 
+-	Whenever an event gets fired, its listener function starts executing. 
+-	Node.js has multiple in-built events available through events module and EventEmitter class which are used to bind events.
+-	Import events module	:					var events = require('events');
+-	Create an eventEmitter object	:			var eventEmitter = new events.EventEmitter();
+-	Bind event and event handler as follows	:	eventEmitter.on('eventName', eventHandler);
+-	Fire an event	:							eventEmitter.emit('eventName');
+
+
+Buffers :-
+-	Buffer class is a global class that can be accessed in an application without importing the buffer module.
+-	var buf = new Buffer("Simply Easy Learning", "utf-8");
+-	Though "utf8" is the default encoding, you can use any of the following encodings "ascii", "utf8", "base64" or "hex".
+-	Write : buf.write, Read : buf.toString, Convert Buffer to JSON : buf.toJSON()
+
+
+Streams	:-
+-	Streams are objects that let you read data from a source or write data to a destination in 'continuous' fashion. 
+-	Large data at that time useful. Large data devide data in number of strings.
+-	read file read all data at once. while in this we devide the data in no of pieces.
+-	Advantage is when read a pieces write it on screen and read write rather then waiting for whole data to read then write.
+-	In Node.js, there are four types of streams −
+	1)	Readable : Stream which is used for read operation.
+	2)	Writable : Stream which is used for write operation.
+	3)	Duplex   : Stream which can be used for both read and write operation.
+-	Each type of Stream is an EventEmitter instance and throws several events at different instance of times. 
+-	For example, some of the commonly used events are −
+	1)	data  : This event is fired when there is data is available to read.(reading)
+	2)	end   : This event is fired when there is no more data to read.(reading)
+	3)	error : This event is fired when there is any error receiving or writing data.(reading - writing)
+	4)	finish: This event is fired when all the data has been flushed to underlying system.(writing)
+-	Piping is a mechanism where we provide the output of one stream as the input to another stream. 
+-	It is normally used to get data from one stream and to pass the output of that stream to another stream.
+-	Ex : readerStream.pipe(writerStream); 	
+-	Chaining is a mechanism to connect output of one stream to another stream & create a chain of multiple stream operations.
+-	https://www.tutorialspoint.com/nodejs/nodejs_streams.htm
+
+
+File System	:-
+-	Ex: 8_ReadWriteFromFile.js, 9_CreateRemoveDirectory.js
+-	https://www.tutorialspoint.com/nodejs/nodejs_file_system.htm
+
+
+Global Objects :-
+-	Node.js global objects are global in nature and they are available in all modules. 
+-	We do not need to include these objects in our application, rather we can use them directly.
+-	__filename : This is the resolved absolute path of this code file.
+-	__dirname  : the name of the directory that the currently executing script resides in.
+-	The setTimeout(cb, ms) global function is used to run callback cb after at least ms milliseconds. 
+-	clearTimeout(t) global function is used to stop a timer that was previously created with setTimeout().
+-	The setInterval(cb, ms) global function is used to run callback cb repeatedly after at least ms milliseconds.
+
