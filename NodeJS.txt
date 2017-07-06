@@ -155,3 +155,13 @@ Express Package :-
 -	contains middleware framework
 -	Http methods like GET, POST, DELETE, PUT
 -	app.get('route',fn);
+
+
+Templating Engine :-
+-	Want to put dynamic content/data into html page use template engine.
+-	also called as view engine
+-	lots of view engine we use ejs
+-	ejs file like profile.ejs
+-	we can use the functionality like jsp expression tag
+-	for sending to this file we use method name render() and this method bydefault go to check in views folder
+-	spp.set('view engine', ejs ); // default engine specify

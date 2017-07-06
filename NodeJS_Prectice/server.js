@@ -1,17 +1,16 @@
 var express = require('express');    //because its a function
 var app = express();
 
-// hen user call http://127.0.0.1:3000 then the function execute.
-app.get('/',function(req,res){
-  res.send("home page");
-});
+app.set('view engine', 'ejs' ); // default engine specify
 
-app.get('/home',function(req,res){
-  res.send("home page");
+
+// when user call http://127.0.0.1:3000 then the function execute.
+app.get('/',function(req,res){
+  res.sendFile(__dirname+'/index.html');
 });
 
 app.get('/error',function(req,res){
-  res.send("error page");
+  res.sendFile(__dirname+'/error.html');
 });
 
 app.get('/json',function(req,res){
@@ -19,8 +18,9 @@ app.get('/json',function(req,res){
   res.send(JSON.stringify(students));
 });
 
-app.get('/profile/:name',function(req,res){
-  res.send("You requested to see profile of " + req.params.name);
+app.get('/profile/:name',function(req,res){           // render method bydefault go to check in views folder
+  var data = {age: 21, clg: 'DAIICT'};
+  res.render('profile',{person: req.params.name,data: data});                              // send data in parameter
 });
 
 app.listen(3000);
