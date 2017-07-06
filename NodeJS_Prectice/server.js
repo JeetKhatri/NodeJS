@@ -19,7 +19,7 @@ app.get('/json',function(req,res){
 });
 
 app.get('/profile/:name',function(req,res){           // render method bydefault go to check in views folder
-  var data = {age: 21, clg: 'DAIICT'};
+  var data = {age: 21, clg: 'DAIICT',hobbies: ['cricket','gaming','tennis']};
   res.render('profile',{person: req.params.name,data: data});                              // send data in parameter
 });
 
