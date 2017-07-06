@@ -3,7 +3,7 @@ var app = express();
 
 app.set('view engine', 'ejs' ); // default engine specify
 
-app.use('/css',express.static('css'));
+app.use('/css',express.static('css'));   //static builtin middleware
 
 // when user call http://127.0.0.1:3000 then the function execute.
 /*app.get('/',function(req,res){
