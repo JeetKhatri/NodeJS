@@ -165,3 +165,10 @@ Templating Engine :-
 -	we can use the functionality like jsp expression tag
 -	for sending to this file we use method name render() and this method bydefault go to check in views folder
 -	spp.set('view engine', ejs ); // default engine specify
+
+middleware :-
+-	whatever is between the request and response is middleware.
+-	app.get('/contact',function(req,res){
+		console.log("cantact called");         //middleware
+		res.render('contact');
+	});

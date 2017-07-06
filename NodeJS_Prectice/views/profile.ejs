@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Profile</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <% include nav.ejs %>
-  <h1>Welcome to <%= person %>'s profile</h1>
-  <h1>Age : <%= data.age %></h1>
+  <h1>Welcome to <%= qs.name %>'s profile</h1>
+  <h1>Age : <%= qs.age %></h1>
   <h1>clg : <%= data.clg %></h1>
   <h3>Hobbies</h3>
   <ul>
