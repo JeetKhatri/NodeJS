@@ -141,8 +141,6 @@ why use Package.json :-
 -	Ex : npm install express -save
 -	when we write above command it will add dependency in json file
 
-Express Package :-
--	express package helps us with routing and templating.
 
 nodemon package :-
 -	it will monitor our application file and when server is running at that time if we make change in file like server.js etc.
@@ -151,3 +149,9 @@ nodemon package :-
 -	npm install nodemon -g
 -	here -g for install globally.
 -	use nodemon server.js
+
+Express Package :-
+-	express package helps us with routing and templating.
+-	contains middleware framework
+-	Http methods like GET, POST, DELETE, PUT
+-	app.get('route',fn);

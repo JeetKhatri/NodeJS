@@ -1,18 +1,22 @@
-var http = require('http');
-var fs = require('fs');
-var server = http.createServer(function(req,res){
-  console.log("requested url : "+req.url);
-  if(req.url === '/home' || req.url === '/' ){
-    res.writeHead(200,{'Content-Type' : 'text/html'});
-    var myReadStream = fs.createReadStream('index.html','utf8').pipe(res);
-  }else if(req.url == '/json'){
-    var students = [{name: 'jeet',age: 21}, {name: 'harsh',age: 22}];
-    res.writeHead(200,{'Content-Type' : 'application/json'});
-    res.end(JSON.stringify(students));
-  }else{
-    res.writeHead(404,{'Content-Type' : 'text/html'});
-    var myReadStream = fs.createReadStream('error.html','utf8').pipe(res);
-  }
+var express = require('express');    //because its a function
+var app = express();
+
+// hen user call http://127.0.0.1:3000 then the function execute.
+app.get('/',function(req,res){
+  res.send("home page");
 });
-server.listen(3000,'127.0.0.1');
-console.log("server started");
+
+app.get('/home',function(req,res){
+  res.send("home page");
+});
+
+app.get('/error',function(req,res){
+  res.send("error page");
+});
+
+app.get('/json',function(req,res){
+  var students = [{name: 'jeet',age: 21}, {name: 'harsh',age: 22}];
+  res.send(JSON.stringify(students));
+});
+
+app.listen(3000);
