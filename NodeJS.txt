@@ -131,6 +131,23 @@ Global Objects :-
 NPM :- (Node Package Manager)
 -	It's just a bunch of command-line tools which can help us to install third-party packages or modules.
 -	It helps to perform perticular type of task whithin nodeJS application.
--	Ex express packagfe helps us with routing and templating.
 -	with the help of NPM we can Load that package into our project and use their functionality.
 -	We can install packages, update packages, publish our own package using NPM.
+
+
+why use Package.json :-
+-	using npm install many packages but can't keep track which application depends on which packages.
+-	package.json keep track of it.
+-	Ex : npm install express -save
+-	when we write above command it will add dependency in json file
+
+Express Package :-
+-	express package helps us with routing and templating.
+
+nodemon package :-
+-	it will monitor our application file and when server is running at that time if we make change in file like server.js etc.
+-	then it will monitor that and update automatically.
+-	It automatically restart server.
+-	npm install nodemon -g
+-	here -g for install globally.
+-	use nodemon server.js

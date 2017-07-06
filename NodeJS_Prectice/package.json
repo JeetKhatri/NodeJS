@@ -1,0 +1,18 @@
+{
+  "name": "nodejs_prectice",
+  "version": "1.0.0",
+  "description": "What is Node.js?\r -\tNode.js is an open source server framework\r -\tNode.js is free\r -\tNode.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)\r -\tNode.js uses JavaScript on the server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+     "study",
+    "nodejs"
+  ],
+  "author": "Jeet Khatri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
