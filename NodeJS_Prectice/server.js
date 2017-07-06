@@ -19,4 +19,8 @@ app.get('/json',function(req,res){
   res.send(JSON.stringify(students));
 });
 
+app.get('/profile/:name',function(req,res){
+  res.send("You requested to see profile of " + req.params.name);
+});
+
 app.listen(3000);
