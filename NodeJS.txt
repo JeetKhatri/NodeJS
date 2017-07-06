@@ -127,3 +127,10 @@ Global Objects :-
 -	clearTimeout(t) global function is used to stop a timer that was previously created with setTimeout().
 -	The setInterval(cb, ms) global function is used to run callback cb repeatedly after at least ms milliseconds.
 
+
+NPM :- (Node Package Manager)
+-	It's just a bunch of command-line tools which can help us to install third-party packages or modules.
+-	It helps to perform perticular type of task whithin nodeJS application.
+-	Ex express packagfe helps us with routing and templating.
+-	with the help of NPM we can Load that package into our project and use their functionality.
+-	We can install packages, update packages, publish our own package using NPM.

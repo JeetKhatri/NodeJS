@@ -28,10 +28,9 @@ myReadStream.on('data',function(chunk){
 });
 */
 
-/*
+
 // Using Pipe
 var myReadStream = fs.createReadStream('readMeStream.txt','utf8');
 var myWriteStream = fs.createWriteStream('writeMeStream.txt');
 
 myReadStream.pipe(myWriteStream);
-*/
