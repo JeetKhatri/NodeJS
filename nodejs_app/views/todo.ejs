@@ -4,18 +4,19 @@
   <title>ToDo App</title>
   <link href="/assets/styles.css" rel="stylesheet" type="text/css">
   <script src ="/assets/jquery-3.2.1.min.js"></script>
+  <script src ="/assets/todo-list.js"></script>
 </head>
 <body>
   <h1>Home page</h1>
   <div id="todo-table">
-      <form>
-         <input type="text" name="todo" placeholder="Add new item" required/>
-         <button type="submit">Add Item</button>
+      <form>                              <!-- All done using assets/todo-list.js AJAX-->
+         <input type="text" name="todo" placeholder="Add new name" required/>
+         <button type="submit">Add Name</button>
       </form>
       <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+          <% for(var i=0;i<names.length;i++){%>
+            <li><%= names[i].name %></li>
+          <%}%>
       </ul>
   </div>
 </body>
