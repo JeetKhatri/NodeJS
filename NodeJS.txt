@@ -138,6 +138,7 @@ NPM :- (Node Package Manager)
 why use Package.json :-
 -	using npm install many packages but can't keep track which application depends on which packages.
 -	package.json keep track of it.
+-	For making package.json file built in command  - npm init
 -	Ex : npm install express -save
 -	when we write above command it will add dependency in json file
 
@@ -172,3 +173,14 @@ middleware :-
 		console.log("cantact called");         //middleware
 		res.render('contact');
 	});
+	
+	
+work with get method	:  req.query	:	use query to url data convert into json
+work with post method	:  req.body		:	post data convert into json  , for using req.body need body-parser package
+
+
+nodejs_app making :-
+-	npm init
+-	npm install express -save          //  for routing
+-	npm install ejs -save              //  put dynamic content/data into page
+-	npm install body-parser -save      //  parse post request
