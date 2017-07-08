@@ -156,7 +156,13 @@ Express Package :-
 -	contains middleware framework
 -	Http methods like GET, POST, DELETE, PUT
 -	app.get('route',fn);
-
+-	Allows to set up middlewares to respond to HTTP Requests.
+-	Allows to dynamically render HTML Pages based on passing arguments to templates.
+-	You should install the following important modules along with express −
+	1)	body-parser : This is a node.js middleware for handling JSON, Raw, Text and URL encoded form data.
+	2)	cookie-parser : Parse Cookie header and populate req.cookies with an object keyed by the cookie names.
+	3)	multer : This is a node.js middleware for handling multipart/form-data.
+-	Ex : https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm (with get, post, file upload, Cookie)
 
 Templating Engine :-
 -	Want to put dynamic content/data into html page use template engine.
@@ -184,3 +190,18 @@ nodejs_app making :-
 -	npm install express -save          //  for routing
 -	npm install ejs -save              //  put dynamic content/data into page
 -	npm install body-parser -save      //  parse post request
+
+
+NoSQL Database / MongoDB :-
+-	Alternative of SQL DB.
+-	insted of table with rows and column, Here we store JSON in DB.
+-	Interect with database in node js we use mongoose package 
+-	insted of table we use collections.
+-	Inside collection store documents(JSON data).
+-	in node we use mongoose package.
+
+
+Mongoose :-
+-	Mongoose is ODM - Object Document Mapper Which will do communication in more clear way.
+-	So first create a structure called as schema, this contains fields name, contrains, no of field
+-	https://www.tutorialspoint.com/nodejs_online_training/nodejs_mongoose.asp
